@@ -1,0 +1,13 @@
+requests
+# MCP Python SDK (1.6+ required for streamable-http transport)
+mcp>=1.6.0
+# For HTTP/SSE transport
+uvicorn
+starlette
+# HTTP client
+httpx
+#.env variables
+python-dotenv
+# Testing
+pytest
+
