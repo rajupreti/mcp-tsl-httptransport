@@ -1,7 +1,7 @@
 from mcp.server.fastmcp import FastMCP #type: ignore
 import json
-import logging
 import requests
+import uvicorn #type: ignore
 import auth
 
 #--------------------------------------------Environment Global Variables--------------------------------------------#
@@ -331,4 +331,4 @@ def response_guidelines() -> str:
 
 #--------------------------------------------Main--------------------------------------------#
 if __name__ == "__main__":
-    mcp.run(transport="streamable-http")
+    uvicorn.run(mcp.streamable_http_app(), host="127.0.0.1", port=8000)
